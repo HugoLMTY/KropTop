@@ -2,20 +2,20 @@ version: '3'
 services:
   front:
     build:
-      context: ./krop-front/
+      context: ./front/
       dockerfile: Dockerfile
     ports:
-      - "8081:8080"
+      - "80:80"
     volumes:
-      - ./krop-front:/app
+      - ./front:/app
     depends_on:
       - back
 
   back:
     build:
-      context: ./krop-back/
+      context: ./back/
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
-      - ./krop-back:/app
+      - ./back:/app
