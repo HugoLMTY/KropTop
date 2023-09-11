@@ -1,14 +1,15 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
     node: true,
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:nuxt/recommended',
+    'prettier',
   ],
-  rules: {
-    'vue/multi-word-component-names': 'off',
-  },
+  plugins: [],
+  // add your custom rules here
+  rules: {},
 }
