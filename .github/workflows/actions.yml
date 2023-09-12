@@ -7,6 +7,7 @@ jobs:
     steps:
     - name: Set up SSH key
       run: |
+        sudo su
         mkdir -p ~/.ssh
         echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 400 ~/.ssh/id_rsa
